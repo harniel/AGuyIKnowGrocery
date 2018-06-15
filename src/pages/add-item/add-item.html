@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+      Add Item
+    </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-list>
+ 
+    <ion-item>
+      <ion-label floating>Item name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+ 
+      <ion-item>
+      	Quantity:    
+        <ion-icon ios="ios-arrow-dropdown-circle" md="md-arrow-dropdown-circle" (click)="minusQuant()"></ion-icon>     {{this.quantity}}     <ion-icon ios="ios-arrow-dropup-circle" md="md-arrow-dropup-circle" (click)="addQuant()"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+    	<ion-label>Color</ion-label>
+    		<ion-select [(ngModel)]="color">
+		      <ion-option value="red">Red</ion-option>
+		      <ion-option value="blue">Blue</ion-option>
+		      <ion-option value="green">Green</ion-option>
+		    </ion-select>
+  	</ion-item>
+
+  	<ion-item>
+      <ion-label floating>Brand</ion-label>
+      <ion-input type="text" [(ngModel)]="brand"></ion-input>
+    </ion-item>
+
+
+  	<ion-item>
+      <ion-label floating>Size</ion-label>
+      <ion-input type="text" [(ngModel)]="size"></ion-input>
+    </ion-item>
+ 
+  </ion-list>
+ 
+  <button full ion-button color="secondary" (click)="saveItem()">Save</button>
+ 
+</ion-content>
