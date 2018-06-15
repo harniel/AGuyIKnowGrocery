@@ -1,0 +1,8 @@
+{
+  "name": "groceylist",
+  "app_id": "92ac994c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
